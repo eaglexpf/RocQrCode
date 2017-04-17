@@ -1,5 +1,5 @@
-# RocQrCode
-# roc.xu
+# RocQrCode <small>roc.xu</small>
+## php生成二维码
 
 ### composer require eaglexpf/rocqrcode @dev
 ```
