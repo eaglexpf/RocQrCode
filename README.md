@@ -2,7 +2,7 @@
 # roc.xu
 
 ### composer require eaglexpf/rocqrcode @dev
-···
+```
 use RocQrCode\App;
 
 $code = "qrcode";
@@ -13,4 +13,4 @@ if (!is_file($dir)){
 Http::header("Content-type: image/png");
 return $connection->send(file_get_contents($dir));
 
-···
+```
