@@ -3,7 +3,6 @@
 
 ### composer require eaglexpf/rocqrcode @dev
 ```
-use RocQrCode\App;
 
 $code = "qrcode";
 $file = __DIR__."/../../webserver/".urlencode($code).".png";
