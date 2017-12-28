@@ -2,6 +2,7 @@
     "name": "eaglexpf/rocqrcode",
     "description": "qrcode php",
     "require": {
+        "workerman/workerman": "3.5.4"
     },
     "autoload": {
         "psr-4": {

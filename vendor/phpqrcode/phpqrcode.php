@@ -943,12 +943,12 @@
             $image = self::image($frame, $pixelPerPoint, $outerFrame);
             
             if ($filename === false) {
-                Header("Content-type: image/png");
+                Workerman\Protocols\Http::header("Content-type: image/png");
                 ImagePng($image);
             } else {
                 if($saveandprint===TRUE){
                     ImagePng($image, $filename);
-                    header("Content-type: image/png");
+                    Workerman\Protocols\Http::header("Content-type: image/png");
                     ImagePng($image);
                 }else{
                     ImagePng($image, $filename);
@@ -964,7 +964,7 @@
             $image = self::image($frame, $pixelPerPoint, $outerFrame);
             
             if ($filename === false) {
-                Header("Content-type: image/jpeg");
+                Workerman\Protocols\Http::header("Content-type: image/jpeg");
                 ImageJpeg($image, null, $q);
             } else {
                 ImageJpeg($image, $filename, $q);            

@@ -6,11 +6,9 @@
 use RocQrCode\App;
 
 $code = "qrcode";
-$dir = __DIR__."/../../webserver/".urlencode($code).".png";
-if (!is_file($dir)){
-    App::png($code,$dir,QR_ECLEVEL_Q,10,1);
-}
+$file = __DIR__."/../../webserver/".urlencode($code).".png";
+$qrcode = RocQrCode::png($code,$file,0,10,1);//不需要保存图片的话$file传入false
 Http::header("Content-type: image/png");
-return $connection->send(file_get_contents($dir));
+return $connection->send($qrcode);
 
 ```
